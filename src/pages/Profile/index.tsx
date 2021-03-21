@@ -62,13 +62,13 @@ const Profile: React.FC = () => {
             .email('Digite um e-mail válido'),
           old_password: Yup.string(),
           password: Yup.string().when('old_password', {
-            is: val => !!val.length,
+            is: (val) => !!val.length,
             then: Yup.string().required('Campo Obrigatório'),
             otherwise: Yup.string(),
           }),
           password_confirmation: Yup.string()
             .when('old_password', {
-              is: val => !!val.length,
+              is: (val) => !!val.length,
               then: Yup.string().required('Campo Obrigatório'),
               otherwise: Yup.string(),
             })
@@ -101,7 +101,7 @@ const Profile: React.FC = () => {
 
         const response = await api.put('/profile', formData);
 
-        updateUser(response.data);
+        await updateUser(response.data);
 
         Alert.alert('Perfil atualizado com sucesso!');
 
@@ -150,9 +150,9 @@ const Profile: React.FC = () => {
           uri: response.uri,
         });
 
-        api.patch('users/avatar', data).then(apiResponse => {
-          updateUser(response.data);
-        });
+        api
+          .patch('users/avatar', data)
+          .then(apiResponse => updateUser(apiResponse.data));
       },
     );
   }, [updateUser, user.id]);
@@ -169,7 +169,7 @@ const Profile: React.FC = () => {
         enabled
       >
         <ScrollView
-          contentContainerStyle={{ flex: 1 }}
+          // contentContainerStyle={{ flex: 1 }}
           keyboardShouldPersistTaps="handled"
         >
           <Container>
@@ -192,7 +192,9 @@ const Profile: React.FC = () => {
                 icon="user"
                 placeholder="Nome"
                 returnKeyType="next"
-                onSubmitEditing={() => emailInputRef.current?.focus()}
+                onSubmitEditing={() => {
+                  emailInputRef.current?.focus();
+                }}
               />
 
               <Input
@@ -204,7 +206,9 @@ const Profile: React.FC = () => {
                 icon="mail"
                 placeholder="E-mail"
                 returnKeyType="next"
-                onSubmitEditing={() => oldPasswordInputRef.current?.focus()}
+                onSubmitEditing={() => {
+                  oldPasswordInputRef.current?.focus();
+                }}
               />
 
               <Input
@@ -216,7 +220,9 @@ const Profile: React.FC = () => {
                 textContentType="newPassword"
                 returnKeyType="next"
                 containerStyle={{ marginTop: 16 }}
-                onSubmitEditing={() => passwordInputRef.current?.focus()}
+                onSubmitEditing={() => {
+                  passwordInputRef.current?.focus();
+                }}
               />
 
               <Input

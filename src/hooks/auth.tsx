@@ -6,6 +6,7 @@ import React, {
   useEffect,
 } from 'react';
 import AsyncStorage from '@react-native-community/async-storage';
+
 import api from '../services/api';
 
 interface User {
@@ -49,7 +50,10 @@ const AuthProvider: React.FC = ({ children }) => {
       if (token[1] && user[1]) {
         api.defaults.headers.authorization = `Bearer ${token[1]}`;
 
-        setData({ token: token[1], user: JSON.parse(user[1]) });
+        setData({ 
+          token: token[1], 
+          user: JSON.parse(user[1])
+        });
       }
 
       setloading(false);
@@ -91,7 +95,7 @@ const AuthProvider: React.FC = ({ children }) => {
         user,
       });
     },
-    [setData, data.token],
+    [data.token],
   );
 
   return (

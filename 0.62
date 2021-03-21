@@ -1,0 +1,67 @@
+yarn add v1.22.5
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+info fsevents@1.2.13: The platform "win32" is incompatible with this module.
+info "fsevents@1.2.13" is an optional dependency and failed compatibility check. Excluding it from installation.
+info fsevents@2.3.2: The platform "win32" is incompatible with this module.
+info "fsevents@2.3.2" is an optional dependency and failed compatibility check. Excluding it from installation.
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+success Saved 52 new dependencies.
+info Direct dependencies
+└─ react-native-windows@0.64.0
+info All dependencies
+├─ @babel/preset-flow@7.12.13
+├─ @babel/preset-typescript@7.13.0
+├─ @jest/create-cache-key-function@26.6.2
+├─ @react-native-windows/cli@0.64.0
+├─ @react-native-windows/find-repo-root@0.64.0
+├─ @react-native-windows/package-utils@0.64.0
+├─ @react-native-windows/telemetry@0.64.0
+├─ @react-native/assets@1.0.0
+├─ @react-native/normalize-color@1.0.0
+├─ @react-native/polyfills@1.0.0
+├─ @sideway/address@4.1.1
+├─ @sideway/formula@3.0.0
+├─ @sideway/pinpoint@2.0.0
+├─ appdirsjs@1.2.4
+├─ applicationinsights@1.8.10
+├─ array-uniq@1.0.3
+├─ ast-types@0.14.2
+├─ async-hook-jl@1.7.6
+├─ async-limiter@1.0.1
+├─ async-listener@0.6.10
+├─ babel-core@7.0.0-bridge.0
+├─ cli-spinners@2.6.0
+├─ cls-hooked@4.2.2
+├─ colors@1.4.0
+├─ continuation-local-storage@3.2.1
+├─ diagnostic-channel-publishers@0.4.4
+├─ diagnostic-channel@0.3.1
+├─ emitter-listener@1.1.2
+├─ flow-parser@0.121.0
+├─ get-monorepo-packages@1.2.0
+├─ interpret@1.4.0
+├─ joi@17.4.0
+├─ jscodeshift@0.11.0
+├─ map-age-cleaner@0.1.3
+├─ mem@4.3.0
+├─ metro-transform-worker@0.64.0
+├─ mustache@4.1.0
+├─ neo-async@2.6.2
+├─ node-dir@0.1.17
+├─ ob1@0.64.0
+├─ p-defer@1.0.0
+├─ p-is-promise@2.1.0
+├─ react-native-codegen@0.0.6
+├─ react-native-windows@0.64.0
+├─ recast@0.20.4
+├─ rechoir@0.6.2
+├─ shimmer@1.2.1
+├─ stack-chain@1.3.7
+├─ username@5.1.0
+├─ xml-parser@1.2.1
+├─ xmldom@0.3.0
+└─ xpath@0.0.27
+Done in 66.23s.
